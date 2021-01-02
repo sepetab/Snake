@@ -35,6 +35,7 @@ for(let i = 0; i<196 ; i++){
         squares[square].classList.add('snake')
     }
     setHead()
+    setTail()
     appleGen()
     startButton.removeEventListener("click", start)
     startButton.classList.remove('hover')
@@ -77,6 +78,7 @@ function restart(){
         squares[square].classList.add('snake')
     }
     setHead()
+    setTail()
     loop = setInterval(move,interval)
     finalStat.classList.remove('rainbow_text_animated')
     resBtn.removeEventListener("click", restart)
@@ -92,7 +94,9 @@ function move(e) {
     ||squares[toMoveSquare].classList.contains('snake')
     ) return endGame(toMoveSquare)
 
+    removeTail()
     const tail = currentSnake.pop()
+    setTail()
     squares[tail].classList.remove('snake')
     removeHead()
     currentSnake.unshift(toMoveSquare)
@@ -100,11 +104,11 @@ function move(e) {
     squares[toMoveSquare].classList.add('snake')
 
     if(appleIndex === currentSnake[0]){
-        squares[appleIndex].classList.remove('apple')
-        appleGen()
         for(let score of scores){score.textContent = parseInt(score.textContent) + 1}
-        squares[tail].classList.add('snake')
         currentSnake.push(tail)
+        squares[tail].classList.add('snake')
+        setTail()
+        appleGen()
         currentScore++
         clearInterval(loop)
         interval *= speed
@@ -159,6 +163,15 @@ function setHead(){
     }else if(direction === -1){
         squares[currentSnake[0]].classList.add('head-left')
     }
+}
+
+function removeTail(){
+    for(let x of currentSnake){squares[x].classList.remove('tail')}
+}
+
+function setTail(){
+    removeTail()
+    squares[currentSnake[currentSnake.length-1]].classList.add('tail')
 }
 
 

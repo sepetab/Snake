@@ -17,6 +17,16 @@ h1{
     margin:5%;
 }
 
+h3{
+    display:inline-block;
+    margin:0;
+    padding:2%;
+}
+
+#restart h1 {
+    margin:0;
+}
+
 .grid{
     margin:20px auto;
     width:700px;
@@ -71,6 +81,15 @@ h1{
     background-size:100%;
 }
 
+.snake.tail {
+    background:white;
+    background-size:100%;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-image:url(images/tail.jpeg);
+
+}
+
 
 
 
@@ -87,11 +106,7 @@ h1{
     justify-content: space-evenly;
 }
 
-h3{
-    display:inline-block;
-    margin:0;
-    padding:2%;
-}
+
 
 
 /* Buttons */
@@ -127,9 +142,7 @@ h3{
     display:inline-block
 }
 
-#restart h1 {
-    margin:0;
-}
+
 
 /* Rainbow text from https://stackoverflow.com/questions/54702124/rainbow-text-animation-using-only-css */
 
