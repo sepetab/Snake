@@ -1,0 +1,155 @@
+body{
+    background:rgba(0,0,0,0.9);
+    color:white;
+    font-family: 'VT323', monospace, serif;
+}
+
+/* Layout */
+
+header {
+    text-align:center;
+    font-size:60px;
+    user-select: none;
+    margin:50px;
+}
+
+h1{
+    margin:5%;
+}
+
+.grid{
+    margin:20px auto;
+    width:700px;
+    height:700px;
+    display:none;
+    flex-wrap:wrap;
+}
+
+.square {
+    background:white;
+    background-image:url(images/grass.jpg);
+    background-size:100%;
+    background-repeat:no-repeat;
+    background-position: center;
+    width: 50px;
+    height:50px;
+    margin:0;
+}
+
+
+/* SNAKE */
+
+.snake {
+    background:black;
+}
+
+.snake.head-right {
+    background:white;
+    background-image:url(images/head-right.jpg);
+    background-repeat:no-repeat;
+    background-size:100%;
+}
+
+.snake.head-left {
+    background:white;
+    background-image:url(images/head-left.jpg);
+    background-repeat:no-repeat;
+    background-size:100%;
+}
+
+.snake.head-down {
+    background:white;
+    background-image:url(images/head-down.jpg);
+    background-repeat:no-repeat;
+    background-size:100%;
+}
+
+.snake.head-top {
+    background:white;
+    background-image:url(images/head-top.jpg);
+    background-repeat:no-repeat;
+    background-size:100%;
+}
+
+
+
+
+
+.apple {
+    background-size:100%;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-image:url(images/mouse.png);
+}
+
+#scores {
+    display:none;
+    justify-content: space-evenly;
+}
+
+h3{
+    display:inline-block;
+    margin:0;
+    padding:2%;
+}
+
+
+/* Buttons */
+
+#restart-button{
+    width:50%;
+    border-radius:20px;
+    background:rgba(255,255,255,0.5);
+}
+
+#start-button{
+    margin-top:0;
+    border-radius:20px;
+    max-width:1000px;
+    margin:0 auto;
+
+    background:rgba(255,255,255,0.5)
+}
+
+
+#start-button.hover:hover,
+#restart-button.hover:hover {
+    cursor:pointer;
+    background: rgba(0,0,255,0.8);
+}
+
+#restart{
+    display:none;
+    color:white;
+}
+
+.score {
+    display:inline-block
+}
+
+#restart h1 {
+    margin:0;
+}
+
+/* Rainbow text from https://stackoverflow.com/questions/54702124/rainbow-text-animation-using-only-css */
+
+.rainbow_text_animated {
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+
