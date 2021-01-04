@@ -37,7 +37,7 @@ h3{
 
 .square {
     background:white;
-    background-image:url(images/grass.jpg);
+    background-image:url(../img/grass.jpg);
     background-size:100%;
     background-repeat:no-repeat;
     background-position: center;
@@ -55,28 +55,28 @@ h3{
 
 .snake.head-right {
     background:white;
-    background-image:url(images/head-right.jpg);
+    background-image:url(../img/head-right.jpg);
     background-repeat:no-repeat;
     background-size:100%;
 }
 
 .snake.head-left {
     background:white;
-    background-image:url(images/head-left.jpg);
+    background-image:url(../img/head-left.jpg);
     background-repeat:no-repeat;
     background-size:100%;
 }
 
 .snake.head-down {
     background:white;
-    background-image:url(images/head-down.jpg);
+    background-image:url(../img/head-down.jpg);
     background-repeat:no-repeat;
     background-size:100%;
 }
 
 .snake.head-top {
     background:white;
-    background-image:url(images/head-top.jpg);
+    background-image:url(../img/head-top.jpg);
     background-repeat:no-repeat;
     background-size:100%;
 }
@@ -86,7 +86,7 @@ h3{
     background-size:100%;
     background-repeat:no-repeat;
     background-position: center;
-    background-image:url(images/tail.jpeg);
+    background-image:url(../img/tail.jpeg);
 
 }
 
@@ -98,7 +98,7 @@ h3{
     background-size:100%;
     background-repeat:no-repeat;
     background-position: center;
-    background-image:url(images/mouse.png);
+    background-image:url(../img/mouse.png);
 }
 
 #scores {
